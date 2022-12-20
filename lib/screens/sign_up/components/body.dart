@@ -33,7 +33,8 @@ class Body extends StatelessWidget {
               const SocialLoginRow(),
               SizedBox(height: getProportionateScreenHeight(20)),
               const Text(
-                "By continuing, you're confirmed that you agree \nwith our Terms and Conditions",
+                "You're required to complete your \nprofile in the next page",
+                // "By continuing, you're confirmed that you agree \nwith our Terms and Conditions",
                 textAlign: TextAlign.center,
               ),
             ],
