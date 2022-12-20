@@ -1,12 +1,8 @@
+import 'package:ecommerce/screens/forgot_password/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_list.dart';
-import 'package:flutter_signin_button/button_view.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../components/custom_suffix_icon.dart';
 import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
-import '../../../components/social_card.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -51,9 +47,13 @@ class _SignFormState extends State<SignForm> {
               ),
               const Text("Remember me"),
               const Spacer(),
-              const Text(
-                "Forgot Password",
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(
+                    context, ForgotPasswordScreen.routeName),
+                child: const Text(
+                  "Forgot Password",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               ),
             ],
           ),
