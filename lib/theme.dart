@@ -42,6 +42,7 @@ TextTheme textTheme() {
 
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
+    centerTitle: true,
     iconTheme: IconThemeData(
       color: Colors.black,
     ),

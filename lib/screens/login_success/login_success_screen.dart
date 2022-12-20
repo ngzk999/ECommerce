@@ -10,7 +10,6 @@ class LoginSuccessScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const SizedBox(), // to hide back button
-        centerTitle: true,
         title: const Text("Login Success"),
       ),
       body: const Body(),
