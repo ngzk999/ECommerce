@@ -2,6 +2,7 @@ import 'package:ecommerce/components/custom_suffix_icon.dart';
 import 'package:ecommerce/components/default_button.dart';
 import 'package:ecommerce/components/form_error.dart';
 import 'package:ecommerce/constants.dart';
+import 'package:ecommerce/screens/otp/otp_screen.dart';
 import 'package:ecommerce/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +39,7 @@ class _ProfileFormState extends State<ProfileForm> {
             press: () {
               if (_formKey.currentState!.validate() && errors.isEmpty) {
                 // Go to OTP Screen
+                Navigator.pushNamed(context, OtpScreen.routeName);
               }
             },
           ),
@@ -63,7 +65,7 @@ class _ProfileFormState extends State<ProfileForm> {
           });
           return "";
         }
-        return "";
+        return null;
       },
       keyboardType: TextInputType.streetAddress,
       decoration: const InputDecoration(
@@ -94,7 +96,7 @@ class _ProfileFormState extends State<ProfileForm> {
           });
           return "";
         }
-        return "";
+        return null;
       },
       keyboardType: TextInputType.phone,
       decoration: const InputDecoration(
@@ -136,7 +138,7 @@ class _ProfileFormState extends State<ProfileForm> {
           });
           return "";
         }
-        return "";
+        return null;
       },
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
