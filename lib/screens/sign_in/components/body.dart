@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
                 SizedBox(height: SizeConfig.screenHeight * 0.005),
                 Text(
                   "Welcome Back",
-                  style: headingStyle,
+                  style: kHeadingStyle,
                 ),
                 const Text(
                   "Sign in with your email and password \nor continue with social media",
