@@ -1,4 +1,5 @@
 import 'package:ecommerce/models/product.dart';
+import 'package:ecommerce/screens/details/detail_screen.dart';
 import 'package:ecommerce/screens/home/components/product_card.dart';
 import 'package:ecommerce/screens/home/components/section_title.dart';
 import 'package:ecommerce/size_config.dart';
@@ -20,13 +21,19 @@ class PopularProducts extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ...List.generate(
-                demoProducts.length,
-                (index) => ProductCard(
-                  product: demoProducts[index],
-                  press: () {},
-                ),
-              ),
+              ...List.generate(demoProducts.length, (index) {
+                if (demoProducts[index].isPopular) {
+                  return ProductCard(
+                    product: demoProducts[index],
+                    pressLike: () {},
+                    pressItem: () {
+                      Navigator.pushNamed(context, DetailScreen.routeName, arguments: demoProducts[index]);
+                    },
+                  );
+                }
+
+                return const SizedBox.shrink();
+              }),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
