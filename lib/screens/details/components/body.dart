@@ -63,7 +63,7 @@ class _BodyState extends State<Body> {
 
   Container buildProductColorRow() {
     return Container(
-      padding: EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.only(top: 30),
       decoration: const BoxDecoration(
         color: Color(0xFFF6F7F9),
       ),
