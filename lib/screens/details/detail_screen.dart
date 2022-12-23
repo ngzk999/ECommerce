@@ -22,11 +22,14 @@ class DetailScreen extends StatelessWidget {
 
   PreferredSize buildCustomAppBar(BuildContext context, Product product) {
     return PreferredSize(
-      preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+      preferredSize: Size.fromHeight((AppBar().preferredSize.height)),
       child: SafeArea(
         child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          padding: EdgeInsets.only(
+            left: getProportionateScreenWidth(20),
+            right: getProportionateScreenWidth(20),
+            top: getProportionateScreenWidth(15),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
