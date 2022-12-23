@@ -3,8 +3,8 @@ import 'package:ecommerce/models/product.dart';
 import 'package:ecommerce/size_config.dart';
 import 'package:flutter/material.dart';
 
-class ProductImage extends StatefulWidget {
-  const ProductImage({
+class ProductPreview extends StatefulWidget {
+  const ProductPreview({
     Key? key,
     required this.product,
   }) : super(key: key);
@@ -12,10 +12,10 @@ class ProductImage extends StatefulWidget {
   final Product product;
 
   @override
-  State<ProductImage> createState() => _ProductImageState();
+  State<ProductPreview> createState() => _ProductPreviewState();
 }
 
-class _ProductImageState extends State<ProductImage> {
+class _ProductPreviewState extends State<ProductPreview> {
   int selectedImage = 0;
 
   @override

@@ -1,5 +1,5 @@
 import 'package:ecommerce/models/product.dart';
-import 'package:ecommerce/screens/details/components/product_image.dart';
+import 'package:ecommerce/screens/details/components/product_preview.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -9,7 +9,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProductImage(product: product);
+    return ProductPreview(product: product);
   }
 }
 
